@@ -1,64 +1,65 @@
-# 🎓 Student Performance Prediction – Machine Learning Project
+# 📊 Student Performance Prediction — End-to-End ML Project
 
-This project predicts student performance using Machine Learning and provides a web interface for real-time predictions.
-
----
-
-## 🔗 Live Application
-
-```text
-https://student-performance-ml-predictor-jathin-dseehpf8aef9d2dm.centralindia-01.azurewebsites.net/predictdata
-```
+This project is an **end-to-end machine learning application** that predicts a student's math score based on demographic and academic features.  
+It covers **data collection, preprocessing, model training, a web interface, and deployment on Azure App Service**.
 
 ---
 
-## 🧠 What This Project Does
+## 🌟 Live Demo
 
-```text
-- Collects student details
-- Processes data using ML pipelines
-- Predicts student performance
-- Displays results through a web application
-```
+[Click here to access the live app](https://student-performance-ml-predictor-jathin-dseehpf8aef9d2dm.centralindia-01.azurewebsites.net/predictdata)
 
 ---
 
-## 🏗️ Project Architecture
+## 📖  What This Project Does
+
+While studying, I became fascinated by how **data can reveal hidden patterns and help make predictions**.  
+This curiosity led me to learn **data analysis and machine learning**, and to build this project step by step:
+
+1. Started with raw student data.  
+2. Trained a predictive model.  
+3. Built a Flask web application.  
+4. Deployed the app on **Azure App Service**.  
+
+**GitHub Actions** automatically updates the live application whenever changes are pushed to the main branch.
+
+---
+
+## 🧱 Project Structure
 
 ```text
 ml-project/
 │
-├── app.py
-├── requirements.txt
-├── README.md
+├── app.py                  # Flask app entry point
+├── requirements.txt        # Project dependencies
+├── README.md               # Project documentation
 │
 ├── src/
 │   ├── components/
-│   │   ├── data_ingestion.py
-│   │   ├── data_transformation.py
-│   │   └── model_trainer.py
-│   │
+│   │   ├── data_ingestion.py      # Load and split raw data
+│   │   ├── data_transformation.py # Clean, encode, scale features
+│   │   └── model_trainer.py       # Train and save ML model
+│
 │   ├── pipeline/
-│   │   ├── train_pipeline.py
-│   │   └── predict_pipeline.py
-│   │
-│   ├── exception.py
-│   └── logger.py
+│   │   ├── train_pipeline.py      # End-to-end training pipeline
+│   │   └── predict_pipeline.py    # End-to-end prediction pipeline
+│
+│   ├── exception.py               # Custom exception handling
+│   └── logger.py                  # Logging configuration
 │
 ├── templates/
-│   ├── index.html
-│   └── home.html
+│   ├── index.html                 # Landing page
+│   └── home.html                  # Prediction form page
 │
 └── artifacts/
-    ├── model.pkl
-    └── preprocessor.pkl
-```
+    ├── model.pkl                  # Saved ML model
+    └── preprocessor.pkl           # Saved preprocessing pipeline
 
 ---
 
 ## 🔄 Project Workflow (Simple Explanation)
 
-```text
+
 Raw Data
    ↓
 Data Ingestion
@@ -72,13 +73,10 @@ Model Saved
 User Input (Web Form)
    ↓
 Prediction Output
-```
 
----
 
 ## ⚙️ How the System Works
 
-```text
 1. Read and prepare data
 2. Transform features
 3. Train ML model
@@ -107,7 +105,7 @@ cd ml-project
 pip install -r requirements.txt
 python app.py
 ```
-
+🌐 Once the server is running, open your browser and access:
 ```text
 http://127.0.0.1:10000
 http://127.0.0.1:10000/predictdata
